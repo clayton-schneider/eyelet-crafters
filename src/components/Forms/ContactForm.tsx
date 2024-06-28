@@ -34,7 +34,7 @@ const ContactForm = ({
     to: [
       {
         email: "customerservice@seidelgroup.com",
-        name: "Seidel Customer Service",
+        name: "Eyelet Crafters Customer Service",
       },
       { email: "clayton@simply-sprout.com", name: "Clayton Schneider" },
     ],

@@ -5,6 +5,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "baseUrl": ".",
+    "types": ["astro/client"],
     "paths": {
       "@components/*": ["src/components/*"],
       "@img/*": ["src/img/*"],

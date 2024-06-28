@@ -31,8 +31,9 @@ module.exports = {
         "8xl": "1550px",
       },
       colors: {
-        primary: "#940106",
-        primLight: "#DC1F26",
+        primary: "#283891",
+        primLight: "#354AC0",
+        cta: "#fcd40c",
         green: "#D4F0D4",
       },
     },

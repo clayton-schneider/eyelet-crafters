@@ -1,16 +1,16 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import { Image } from "@astrojs/image/components";
-import { Icon } from "astro-icon";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 import CallToAction from "src/sections/general/CallToAction.astro";
 import PrimaryBtn from "@components/buttons/PrimaryBtn";
 import ContactForm from "@components/Forms/ContactForm";
 
 const contacts = [
-  { name: "ci:location", text: `2223 Thomaston Ave \nWaterbury, CT 06704` },
-  { name: "carbon:phone-filled", text: "203-757-7349" },
-  { name: "ant-design:printer-filled", text: "203-757-9413" },
-  { name: "ic:sharp-email", text: "customerservice@seidelgroup.com" },
+  { name: "mdi:location", text: `2223 Thomaston Ave \nWaterbury, CT 06704` },
+  { name: "mdi:phone", text: "203-757-7349" },
+  { name: "mdi:printer", text: "203-757-9413" },
+  { name: "mdi:email", text: "customerservice@seidelgroup.com" },
 ];
 
 const socialLinks = [
@@ -30,7 +30,7 @@ const fields = [
 
 <Layout
   seo={{
-    metaTitle: "Contact Us | Seidel Group",
+    metaTitle: "Contact Us | Eyelet Crafters",
     metaDescription:
       "Have a question? Reach out to us and we will get back to you as soon as posssible.",
   }}
@@ -98,7 +98,7 @@ const fields = [
         </div>
         <ContactForm
           client:load
-          name="Seidel Group: Contact Form"
+          name="Eyelet Crafters: Contact Form"
           message="Thank you for submitting this contact form. We will reach out to you shortly."
           error="There was an error submitting this form. Please refresh and try again. If the problem persists, please send us an email directly."
           fields={fields}

@@ -12,7 +12,7 @@ const PrimaryBtn = ({ children, to, className, type = "button" }: Props) => (
     href={to}
     className={
       className +
-      " bg-gradient-to-br from-primary to-primLight inline-block px-7 py-3 text-white"
+      " bg-cta inline-block px-7 py-3 font-bold"
     }
   >
     {children}

@@ -1,26 +1,93 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import CallToAction from "src/sections/general/CallToAction.astro";
 import Hero from "src/sections/home/Hero.astro";
 import Industries from "src/sections/general/Industries.astro";
-import Companies from "src/sections/general/Companies.astro";
-import Timeline from "@components/Timeline/Timeline.astro";
+
+import prodDev from "@img/about/facility.jpg"
 ---
 
 <Layout
   seo={{
-    metaTitle: "Seidel Group",
+    metaTitle: "Eyelet Crafters",
     metaDescription:
       "Fully integrated manufacturer of beautiful metal & plastic parts, producing millions of parts per day.",
   }}
 >
   <main>
     <Hero />
-    <Companies />
-    <section class="bg-white pt-20 pb-40 px-[5%]">
-      <Timeline />
-    </section>
+  <section class="bg-white py-20 px-[2.5%]">
+    <div
+      class="max-w-8xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-10 lg:items-start justify-between space-y-5 lg:space-y-0"
+    >
+      <div class="grow shrink-0 max-w-3xl text-center lg:text-left">
+        <h2 class="font-black font-headline text-4xl">Product Development</h2>
+        <p class="mt-2 font-bold text-lg">Your strategic partner</p>
+        <p class="mt-4 text-lg leading-loose">
+        Eyelet Crafters practices what it believes in: that excellence in design and uncompromising service start at the very beginning of product development. Eyelet Crafters works with you to become a strategic partner in the development of your product. We know that communication and feedback is essential during the critical quotation and design stages of custom-made components. Once the design is finalized and approved we begin our in house tool building. A timeline is established and reviewed weekly in our product tool meeting. Any revisions or concerns are communicated by our experienced customer service. Our comprehensive quality control program ensures that your product meets all of your requirements. 
+        </p>
+      </div>
+      <div>
+        <Image
+          format="webp"
+          src={prodDev}
+          alt="seidel group aluminum anodizing in action"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section id="advantage" class="bg-white py-20 px-[2.5%]">
+    <div
+      class="max-w-8xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:items-start justify-between space-y-5 lg:space-y-0"
+    >
+      <div class="grow shrink-0 max-w-3xl text-center lg:text-left">
+        <h2 class="font-bold font-headline text-4xl">
+            Eyelet Crafters Advantage
+        </h2>
+        <p class="mt-4 text-lg leading-loose">
+Eyelet Crafters should be your first choice for engineering and development of your deep drawn metal components. We fabricate , finish , decorate and assemble to your specifications. Utilizing our years of expertise of drawing various metals we make your ideas become reality. An enorrmous advantage is that we build our own eyelet tools in house. This enables us to expedite delivery to our customers. We are one of the leading innovators for solutions to the most challenging designs of deep drawn metal shells
+        </p>
+      </div>
+      <div>
+        <Image
+          format="webp"
+          src={import("@img/industries/cosmetic/gold-top.jpg")}
+          alt="seidel aluminum anodizing"
+        />
+      </div>
+    </div>
+  </section>
+
+
     <Industries />
+
+  <section id="quality" class="bg-white py-20 px-[2.5%]">
+    <div
+      class="max-w-8xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-10 lg:items-start justify-between space-y-5 lg:space-y-0"
+    >
+      <div class="grow shrink-0 max-w-3xl text-center lg:text-left">
+        <h2 class="font-bold font-headline text-4xl">
+          Quality
+        </h2>
+        <p class="mt-4 text-lg leading-loose">
+Our quality assurance program recognizes the need for both dimensional and aesthetic quality. Dimensionally we use state-of-the-art measuring equipment, such as laser micrometers and certified gauge control. Aesthetic quality and integrity is achieved through our constant inspection and attention to defined aesthetic parameters. 
+            <br>
+At Eyelet Crafters we employ several quality control checks from initial concept through finished product. We first provide mechanical specifications for our customer's approval. Then we build a prototype to ensure our interpretation of the design matches our customer's. As your product is manufactured, we use a rotating team of inspectors to ensure the highest level of quality on our production line. Each finished piece is inspected by hand before it is properly packaged to ensure aesthetic quality. 
+              <br>
+We offer a 100% satisfaction guarantee. We take extreme pride in our work. We care about what we manufacture, and form long-lasting strategic partnerships with our customers, which is why some have been with us for over 40 years.
+        </p>
+      </div>
+      <div>
+        <Image
+          format="webp"
+          src={import("@img/capabilities/custom-colors.png")}
+          alt="seidel aluminum anodizing"
+        />
+      </div>
+    </div>
+  </section>
     <CallToAction />
   </main>
 </Layout>

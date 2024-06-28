@@ -1,6 +1,7 @@
 ---
-import logo from "@img/seidel-group-logo.svg";
-import { Icon } from "astro-icon";
+import logo from "@img/eyelet-crafters-logo.png";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 
 const quickLinks = [
   { linkText: "Home", link: "/" },
@@ -16,9 +17,9 @@ const socialLinks = [
 ];
 
 const contacts = [
-  { name: "ci:location", text: `2223 Thomaston Ave \nWaterbury, CT 06704` },
-  { name: "carbon:phone-filled", text: "203-757-7349" },
-  { name: "ic:sharp-email", text: "customerservice@seidelgroup.com" },
+  { name: "mdi:location", text: `2223 Thomaston Ave \nWaterbury, CT 06704` },
+  { name: "mdi:phone", text: "203-757-7349" },
+  { name: "mdi:email", text: "customerservice@seidelgroup.com" },
 ];
 
 const date = new Date();
@@ -30,10 +31,9 @@ const date = new Date();
   >
     <div class="max-w-sm text-center lg:text-left">
       <div>
-        <img class="mx-auto lg:mx-0" src={logo} alt="seidel group logo" />
+        <Image class="" src={logo} alt="eyelet crafters logo" />
         <p class="mt-3">
-          Seidel specializes in metal forming, anodizing, and decorative
-          finishing for aluminum alloy parts across many different industries.
+        Eyelet Crafters products have been widely used by the cosmetic, writing instruments, automotive, drapery hardware, electronics, medical and aerospace industries.
         </p>
         {
           /*<div class="flex space-x-2 mt-3 justify-center lg:justify-start">
@@ -83,7 +83,7 @@ const date = new Date();
       class="max-w-8xl mx-auto flex justify-between flex-col lg:flex-row items-center space-y-2 lg:space-y-0"
     >
       <p class="text-sm">
-        © {date.getFullYear()} Seidel Group | All Rights Reserved | Powered by <a
+        © {date.getFullYear()} Eyelet Crafters | All Rights Reserved | Powered by <a
           href="https://www.simply-sprout.com">Simply Sprout</a
         >
       </p>

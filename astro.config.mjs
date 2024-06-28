@@ -7,13 +7,12 @@ import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 
 // https://astro.build/config
-import image from "@astrojs/image";
-
-// https://astro.build/config
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 import partytown from "@astrojs/partytown";
+
+import icon from "astro-icon"
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,10 +21,8 @@ export default defineConfig({
   build: {
     format: "file"
   },
-  site: "https://seidelgroup.com",
-  integrations: [tailwind(), react(), image({
-    serviceEntryPoint: "@astrojs/image/sharp"
-  }), sitemap(), partytown()],
+  site: "https://eyeletcrafters.com",
+  integrations: [tailwind(), react(), sitemap(), partytown(), icon()],
   vite: {
     ssr: {
       noExternal: ["@splidejs/react-splide"]

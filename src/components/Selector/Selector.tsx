@@ -5,8 +5,6 @@ interface Props {
     name: string;
     title: string;
     p: string;
-    products: string[];
-    img: string;
   }[];
   className?: string;
 }
@@ -33,22 +31,12 @@ const Selector = ({ data, className }: Props) => {
         ))}
       </div>
       <div className="mt-20 flex flex-col lg:flex-row items-center lg:items-start space-y-10 lg:space-y-0 lg:space-x-20">
-        <img
-          src={data[idx].img}
-          alt={data[idx].name}
-          className="md:min-w-[500px] max-w-full md:max-w-[700px] h-full max-h-[500px] object-cover"
-        />
         <div className="text-center lg:text-left">
           <h3 className="font-bold font-headline text-3xl">
             {data[idx].title}
           </h3>
           <p className="mt-4 text-lg leading-relaxed">{data[idx].p}</p>
           <ul className="mt-5 list-disc inline-block marker:text-primary">
-            {data[idx].products?.map((product) => (
-              <li key={product} className="text-lg">
-                {product}
-              </li>
-            ))}
           </ul>
         </div>
       </div>

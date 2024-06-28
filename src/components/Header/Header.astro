@@ -1,24 +1,15 @@
 ---
-import logo from "../../img/seidel-group-logo.svg";
+import { Image } from "astro:assets";
+import logo from "@img/eyelet-crafters-logo.png";
 // Import components
 import NavMenu from "./NavMenu";
 const links = [
-  { linkText: "About Us", link: "/about" },
   {
-    linkText: "Sustainability",
-    link: "/sustainability",
+    linkText: "Our Advantage",
+    link: "#advantage",
   },
-  { linkText: "Capabilities", link: "/capabilities" },
-  {
-    linkText: "Industries",
-    link: "/industries",
-    sublinks: [
-      { linkText: "General", link: "/industries/general" },
-      { linkText: "Cosmetic", link: "/industries/cosmetic-packaging" },
-      { linkText: "Automotive", link: "/industries/automotive" },
-      { linkText: "Pharmaceutical", link: "/industries/pharmaceutical" },
-    ],
-  },
+  { linkText: "Capabilities", link: "#capabilities" },
+  { linkText: "Quality", link: "#quality" },
   { linkText: "Contact Us", link: "/contact" },
 ];
 
@@ -35,7 +26,7 @@ const { className } = Astro.props;
     class="bg-white max-w-8xl mx-auto py-4 px-10 rounded-md shadow-sm flex items-center justify-between"
   >
     <a href="/">
-      <img src={logo} alt="Logo" />
+      <Image src={logo} width={250} alt="eyelet crafters logo"/>
     </a>
 
     <NavMenu links={links} client:load />
