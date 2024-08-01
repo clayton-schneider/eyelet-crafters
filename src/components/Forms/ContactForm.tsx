@@ -33,7 +33,7 @@ const ContactForm = ({
   const sendOptions = {
     to: [
       {
-        email: "customerservice@seidelgroup.com",
+        email: "david.babina@eyetletcrafters.com",
         name: "Eyelet Crafters Customer Service",
       },
       { email: "clayton@simply-sprout.com", name: "Clayton Schneider" },
